@@ -15,7 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from ProyectooSO.views import Home,CrearArchivo
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', Home),
+    path('CrearArchivo/', CrearArchivo),
+    path('CambiarPermisos/', CrearArchivo),
+    path('CambiarNombre/', CrearArchivo),
+    path('CambiarPropietario/', CrearArchivo),
+    path('CambiarRuta/', CrearArchivo),
+    path('Copiar/', CrearArchivo),
+    path('CrearArchivo/', CrearArchivo),
+    path('CrearCarpeta/', CrearArchivo),
+    path('Eliminar/', CrearArchivo),
+    path('Mover/', CrearArchivo),
+    path('VerPermisos/', CrearArchivo),
 ]
