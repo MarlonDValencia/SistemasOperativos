@@ -33,3 +33,11 @@
   background: radial-gradient(#C5C5C5,#FFFFFF);   
   height: 30px; 
 }
+
+#Thumbnail{
+  width: 200px; height: 200px;
+}
+
+#col{
+  width: 220px; height: 220px;
+}
