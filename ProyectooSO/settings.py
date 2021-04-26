@@ -26,8 +26,7 @@ SECRET_KEY = 'django-insecure-c3!yncohfzwjt0a%$h*!u7ey2t!__nk#dn2gs5#9ieri(06kmy
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
+STATICFILES_DIRS=["assets"]
 # Application definition
 
 INSTALLED_APPS = [
@@ -54,7 +53,7 @@ ROOT_URLCONF = 'ProyectooSO.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["FrontEnd"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,7 +116,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/assets/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
