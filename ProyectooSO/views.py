@@ -27,7 +27,7 @@ def Mover(request):
     return render(request,"Mover.html")
 def VerPermisos(request):
     try:
-        namae = request.GET["namaewa"]
+        namae= 'a'
         out = getoutput(f"ls -l {namae}")
         salida = f"Los permisos de {namae} son:"
     except:
