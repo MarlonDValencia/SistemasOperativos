@@ -15,7 +15,8 @@ def CambiarNombre(request):
     except:
         namae=""
         namaen=""
-    return render(request,"CambiarNombre.html", {"salida":"El nombre ha sido actualizado"})
+        salida=""
+    return render(request,"CambiarNombre.html", {"salida":salida})
 def CambiarPermisos(request):
     try:
         namae=request.POST["namaewa2"]
