@@ -67,7 +67,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Los permisos del archivo son: 
+        <h1>{{ salida }}</h1>
+          <h1>{{ out }}</h1>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>
@@ -78,10 +80,8 @@
   </div>
 </form>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-{% block content %}
-  <h1>{{ salida }}</h1>
-  <h1>{{ out }}</h1>
-{% endblock %}
+
+
   </body>
 
 </html>
