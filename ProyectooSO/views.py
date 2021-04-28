@@ -8,6 +8,8 @@ def CambiarNombre(request):
 def CambiarPermisos(request):
     return render(request,"CambiarPermisos.html")
 def CambiarPropietario(request):
+    try: pass
+    except: pass
     return render(request,"CambiarPropietario.html")
 def CambiarRuta(request):
     return render(request,"CambiarRuta.html")
@@ -20,6 +22,14 @@ def CrearCarpeta(request):
 def Eliminar(request):
     return render(request,"Eliminar.html")
 def Mover(request):
+    try: pass
+    except: pass
     return render(request,"Mover.html")
 def VerPermisos(request):
-    return render(request,"VerPermisos.html")
+    try:
+        namae = request.GET["namaewa"]
+        out = getoutput(f"ls -l {namae}")
+        salida = f"Los permisos de {namae} son:"
+    except:
+        salida = 'paila'
+    return render(request,"VerPermisos.html", {'salida':salida, 'out':out})
