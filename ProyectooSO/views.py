@@ -7,7 +7,15 @@ import subprocess
 def Home(request):
     return render(request,"Home.html")
 def CambiarNombre(request):
-    return render(request,"CambiarNombre.html")
+    try:
+        namae=request.POST["nombrev"]
+        namaen=request.POST["nombren"]
+        system(f"mv {namae} {namaen}")
+        salida="El nombre ha sido actualizado"
+    except:
+        namae=""
+        namaen=""
+    return render(request,"CambiarNombre.html", {"salida":"El nombre ha sido actualizado"})
 def CambiarPermisos(request):
     try:
         namae=request.POST["namaewa2"]
@@ -35,9 +43,23 @@ def Copiar(request):
 def CrearArchivo(request):
     return render(request,"CrearArchivo.html")
 def CrearCarpeta(request):
-    return render(request,"CrearCarpeta.html")
+    try:
+        namae=request.GET["cname"]
+        system(f"mkdir {namae}")
+        salida="La carpeta  fue creada con éxito"
+    except:
+        namae=""
+        salida=""
+    return render(request,"CrearCarpeta.html", {"salida":salida})
 def Eliminar(request):
-    return render(request,"Eliminar.html")
+    try:
+        namae = request.GET["dname"]
+        system(f"rm -rf {namae}")
+        salida = "La carpeta o archivo fue eliminado con éxito"
+    except:
+        namae = ""
+        salida = ""
+    return render(request,"Eliminar.html", {"salida":salida})
 def Mover(request):
     return render(request,"Mover.html")
 def VerPermisos(request):
