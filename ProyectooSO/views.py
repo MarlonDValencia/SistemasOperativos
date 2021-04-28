@@ -39,9 +39,25 @@ def CambiarPropietario(request):
 def CambiarRuta(request):
     return render(request,"CambiarRuta.html")
 def Copiar(request):
-    return render(request,"Copiar.html")
+    try:
+        namae=request.POST["nameaa"]
+        destino=request.POST["destino"]
+        system(f"cp -r {namae} {destino}")
+        salida="El archivo fue copiado y pegado correctamente"
+    except:
+        namae=""
+        destino=""
+        salida=""
+    return render(request,"Copiar.html", {"salida":salida})
 def CrearArchivo(request):
-    return render(request,"CrearArchivo.html")
+    try:
+        namae=request.GET["aname"]
+        system(f"touch {namae}")
+        salida="El archivo fue creado con éxito"
+    except:
+        namae=""
+        salida=""
+    return render(request,"CrearArchivo.html", {"salida":salida})
 def CrearCarpeta(request):
     try:
         namae=request.GET["cname"]
@@ -61,7 +77,16 @@ def Eliminar(request):
         salida = ""
     return render(request,"Eliminar.html", {"salida":salida})
 def Mover(request):
-    return render(request,"Mover.html")
+    try:
+        namae=request.POST["partida"]
+        destino=request.POST["final"]
+        system(f"mv {namae} {destino}")
+        salida="El archivo fue cortado y movido correctamente"
+    except:
+        namae="a"
+        destino="a"
+        salida=""
+    return render(request,"Mover.html", {"salida":salida})
 def VerPermisos(request):
     try:
 	    namae=request.GET["namaewa"]

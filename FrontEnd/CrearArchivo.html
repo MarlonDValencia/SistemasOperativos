@@ -46,37 +46,21 @@
   </div>
 </header>
 <div class="b-example-divider" id="espacio"></div>
-<form class="row g-3">
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Nombre del archivo</label>
-    <input type="text" class="form-control" id="inputEmail4">
+<form action="/CrearArchivo/" method="GET">
+  <div class="form-row">
+    <div class="form-group col-auto">
+    <label for="exampleInputEmail1">Nombre</label>
+    <input type="text" class="form-control" name="aname" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
 
-  <div class="col-12">
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Crear
+  </div>
+
+<button type="submit" class="btn btn-primary">
+  Crear Archivo
 </button>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Archivo creado con éxito</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        El archivo fue creado de forma exitosa en el directorio especificado
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>
-      </div>
-    </div>
-  </div>
-</div>
-  </div>
 </form>
+{{salida}}
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

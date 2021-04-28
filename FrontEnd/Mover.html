@@ -45,40 +45,19 @@
   </div>
 </header>
 <div class="b-example-divider" id="espacio"></div>
-<form class="row g-3">
+<form class="row g-3" action="/Mover/" method="POST">{% csrf_token %}
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Nombre del archivo</label>
-    <input type="text" class="form-control" id="inputEmail4">
+    <input type="text" class="form-control" name="partida" id="inputEmail6">
   </div>
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Destino</label>
-    <input type="text" class="form-control" id="inputEmail4">
+    <input type="text" class="form-control" name="final" id="inputEmail4">
   </div>
-  <div class="col-12">
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Cortar y pegar
-</button>
+  <button type="submit" class="btn btn-primary">Cortar y Mover</button>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Archivo movido</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        El archivo ha sido movido a la dirección especificada
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>
-      </div>
-    </div>
-  </div>
-</div>
-  </div>
 </form>
+{{salida}}
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
