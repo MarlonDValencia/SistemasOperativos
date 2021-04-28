@@ -1,6 +1,9 @@
 from django.http import HttpResponse
 from django.template import Template, Context
 from django.shortcuts import render
+from os import system
+import subprocess
+
 def Home(request):
     return render(request,"Home.html")
 def CambiarNombre(request):
@@ -22,4 +25,11 @@ def Eliminar(request):
 def Mover(request):
     return render(request,"Mover.html")
 def VerPermisos(request):
-    return render(request,"VerPermisos.html")
+    try:
+	    namae=request.GET["namaewa"]
+	    out=subprocess.getoutput(f"ls -l {namae}")
+	    salida= f"Los permisos de {namae} son:"
+    except:
+	    out="a"
+	    salida="a"
+    return render(request,"VerPermisos.html", {"salida":salida, "out":out})
