@@ -9,9 +9,25 @@ def Home(request):
 def CambiarNombre(request):
     return render(request,"CambiarNombre.html")
 def CambiarPermisos(request):
-    return render(request,"CambiarPermisos.html")
+    try:
+        namae=request.POST["namaewa2"]
+        numero=str(request.POST["ichigo"])
+        system(f"chmod -R {numero} {namae}")
+        salida=subprocess.getoutput(f"ls -l {namae}")
+    except:
+        namae=""
+        salida=""
+    return render(request,"CambiarPermisos.html", {'salida':salida})
 def CambiarPropietario(request):
-    return render(request,"CambiarPropietario.html")
+    try:
+        namae = request.POST["namaewa3"]
+        namae2 = request.POST["ichigo2"]
+        system(f"chown -R {namae2} {namae}")
+        salida = subprocess.getoutput(f"ls -l {namae}")
+    except:
+        namae = ""
+        salida = ""
+    return render(request,"CambiarPropietario.html", {"salida":salida})
 def CambiarRuta(request):
     return render(request,"CambiarRuta.html")
 def Copiar(request):
@@ -30,6 +46,6 @@ def VerPermisos(request):
 	    out=subprocess.getoutput(f"ls -l {namae}")
 	    salida= f"Los permisos de {namae} son:"
     except:
-	    out="a"
-	    salida="a"
+	    out=""
+	    salida=""
     return render(request,"VerPermisos.html", {"salida":salida, "out":out})
