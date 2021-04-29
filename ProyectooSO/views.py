@@ -6,7 +6,7 @@ import subprocess
 
 def Home(request):
     ubicacion = getoutput("pwd")
-    return render(request,"Home.html")
+    return render(request,"Home.html",ubicacion)
 def CambiarNombre(request):
     try:
         namae=request.POST["nombrev"]
