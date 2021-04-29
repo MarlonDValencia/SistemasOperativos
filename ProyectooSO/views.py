@@ -5,6 +5,7 @@ from os import system
 import subprocess
 
 def Home(request):
+    ubicacion = getoutput("pwd")
     return render(request,"Home.html")
 def CambiarNombre(request):
     try:
