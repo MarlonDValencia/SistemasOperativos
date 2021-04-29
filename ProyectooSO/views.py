@@ -5,7 +5,11 @@ from os import system
 import subprocess
 
 def Home(request):
-    ubicacion = getoutput("pwd")
+    try:
+        ubicacion = subprocess.getoutput("pwd")
+    except:
+        ubicacion = ""
+    return render(request, "Home.html", {'La ubicación actual es': ubicacion})
     return render(request,"Home.html",ubicacion)
 def CambiarNombre(request):
     try:
