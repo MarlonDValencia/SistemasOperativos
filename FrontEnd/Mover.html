@@ -20,8 +20,7 @@
       </a>
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" id="sisa">
-        <img src="../assets/imgs/folder.svg" id="Iconito" alt="https://www.facebook.com/pagina">
-        <li><a href="#" class="nav-link px-2 text-secondary">Ruta</a></li>
+        <a href="/"><img src="../assets/imgs/folder.svg" id="Iconito"></a>
         <li><a href="/CrearArchivo" class="nav-link px-2 text-white">Crear Archivos</a></li>
         <li><a href="/CrearCarpeta" class="nav-link px-2 text-white">Crear Carpeta</a></li>
         <li><a href="/CambiarNombre" class="nav-link px-2 text-white">Cambiar Nombre</a></li>
@@ -45,6 +44,9 @@
   </div>
 </header>
 <div class="b-example-divider" id="espacio"></div>
+<H4>
+  {{ubicación}}
+  <H4>
 <form class="row g-3" action="/Mover/" method="POST">{% csrf_token %}
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Nombre del archivo</label>
