@@ -10,7 +10,6 @@ def Home(request):
     except:
         ubicacion = ""
     return render(request, "Home.html", {'La ubicación actual es': ubicacion})
-    return render(request,"Home.html",ubicacion)
 def CambiarNombre(request):
     try:
         namae=request.POST["nombrev"]
