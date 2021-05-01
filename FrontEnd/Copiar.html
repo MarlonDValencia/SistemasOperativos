@@ -24,12 +24,11 @@
         <li><a href="/CrearCarpeta" class="nav-link px-2 text-white">Crear Carpeta</a></li>
         <li><a href="/CambiarNombre" class="nav-link px-2 text-white">Cambiar Nombre</a></li>
         <li><a href="/Eliminar" class="nav-link px-2 text-white">Eliminar</a></li>
-        <li><a href="/Copiar" class="nav-link px-2 text-white">Copiar</a></li>
-        <li><a href="/Mover" class="nav-link px-2 text-white">Mover</a></li>
+        <li><a href="/Copiar" class="nav-link px-2 text-white">Copiar Elemento</a></li>
+        <li><a href="/Mover" class="nav-link px-2 text-white">Mover Elemento</a></li>
         <li><a href="/VerPermisos" class="nav-link px-2 text-white">Ver Permisos</a></li>
         <li><a href="/CambiarPermisos" class="nav-link px-2 text-white">Cambiar Permisos</a></li>
         <li><a href="/CambiarPropietario" class="nav-link px-2 text-white">Cambiar Propietario</a></li>
-        <li><a href="/CambiarRuta" class="nav-link px-2 text-white">Cambiar ruta</a></li>
       </ul>
       <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
         <input type="search" class="form-control form-control-dark" placeholder="Buscar...">
@@ -43,9 +42,6 @@
   </div>
 </header>
 <div class="b-example-divider" id="espacio"></div>
-<H4>
-  {{ubicación}}
-  <H4>
 <form class="row g-3" action="/Copiar/" method="POST">{% csrf_token %}
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Nombre del archivo</label>

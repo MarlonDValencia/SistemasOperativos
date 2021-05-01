@@ -26,16 +26,14 @@ def CambiarNombre(request):
     return render(request,"CambiarNombre.html", {"salida":salida,'ubicación': ubicacion})
 def CambiarPermisos(request):
     try:
-        ubicacion = subprocess.getoutput("pwd")
         namae=request.POST["namaewa2"]
         numero=str(request.POST["ichigo"])
         system(f"chmod -R {numero} {namae}")
         salida=subprocess.getoutput(f"ls -l {namae}")
     except:
-        ubicacion = subprocess.getoutput("pwd")
         namae=""
         salida=""
-    return render(request,"CambiarPermisos.html", {'salida':salida,'ubicación': ubicacion})
+    return render(request,"CambiarPermisos.html", {'salida':salida})
 def CambiarPropietario(request):
     try:
         ubicacion = subprocess.getoutput("pwd")
@@ -48,9 +46,6 @@ def CambiarPropietario(request):
         namae = ""
         salida = ""
     return render(request,"CambiarPropietario.html", {"salida":salida,'ubicación': ubicacion})
-def CambiarRuta(request):
-    ubicacion = subprocess.getoutput("pwd")
-    return render(request,"CambiarRuta.html", {'ubicación': ubicacion})
 def Copiar(request):
     try:
         ubicacion = subprocess.getoutput("pwd")
