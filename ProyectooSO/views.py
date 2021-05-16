@@ -1,5 +1,3 @@
-from django.http import HttpResponse
-from django.template import Template, Context
 from django.shortcuts import render
 from os import system
 import subprocess
@@ -105,6 +103,7 @@ def Mover(request):
         destino="a"
         salida=""
     return render(request,"Mover.html", {"salida":salida,'ubicación': ubicacion})
+
 def VerPermisos(request):
     ubicacion = subprocess.getoutput("pwd")
     try:
@@ -115,3 +114,19 @@ def VerPermisos(request):
 	    out=""
 	    salida=""
     return render(request,"VerPermisos.html", {"salida":salida, "out":out,'ubicación': ubicacion})
+
+
+def Buscar(request):
+    try:
+     namaeb=request.GET["bbus"]
+     out1=subprocess.getoutput(f"find . -maxdepth 1 -type f | grep {namaeb} -i")
+     out2=subprocess.getoutput(f"find . -maxdepth 1 -type d | grep {namaeb} -i")
+     tx1="Las carpetas son:"
+     tx2="Los archivos son:"
+    except:
+     namaeb=""
+     out1=""
+     out2=""
+     tx1 = ""
+     tx2 = ""
+    return render(request,"Buscar.html", {"out1":out1,"out2":out2,"tx1":tx1,"tx2":tx2})
