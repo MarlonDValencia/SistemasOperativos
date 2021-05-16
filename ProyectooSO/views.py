@@ -99,8 +99,8 @@ def Mover(request):
         salida="El archivo fue cortado y movido correctamente"
     except:
         ubicacion = subprocess.getoutput("pwd")
-        namae="a"
-        destino="a"
+        namae=""
+        destino=""
         salida=""
     return render(request,"Mover.html", {"salida":salida,'ubicación': ubicacion})
 
