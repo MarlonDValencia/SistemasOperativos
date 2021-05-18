@@ -38,15 +38,21 @@
 </header>
 <div class="b-example-divider" id="espacio"></div>
 <form class="row g-3" action="/CambiarPermisos/" method="POST">{% csrf_token %}
+    <div style="margin: 30px">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Nombre del archivo</label>
     <input type="text" class="form-control" name="namaewa2" id="inputEmail4">
   </div>
+        <br>
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Numero del permiso</label>
     <input type="text" class="form-control" name="ichigo" id="inputEmail5">
+
   </div>
-  <div>
+        <br>
+    <button type="submit" class="btn btn-primary">Cambiar permisos</button>
+  </div>
+  <div style="margin: 30px">
     <h1>Informacion de permisos:</h1>
     <p>Los permisos se deben ingresar de acuerdo a la siguiente conviccion:</p>
     <li>Debe ser un numero de 3 digitos, siendo (usuario)(grupo)(otros)</li>
@@ -66,9 +72,7 @@
   </div>
 
 
-<button type="submit" class="btn btn-primary">
-  Cambiar permisos
-</button>
+
     </form>
 
 {{salida}}

@@ -38,16 +38,20 @@
 </header>
 <div class="b-example-divider" id="espacio"></div>
 <form class="row g-3" action="/Mover/" method="POST">{% csrf_token %}
+  <div style="margin: 20px">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Nombre del archivo</label>
     <input type="text" class="form-control" name="partida" id="inputEmail6">
   </div>
+    <br>
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Destino</label>
     <input type="text" class="form-control" name="final" id="inputEmail4">
   </div>
+    <br>
   <button type="submit" class="btn btn-primary">Cortar y Mover</button>
 
+</div>
 </form>
 {{salida}}
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

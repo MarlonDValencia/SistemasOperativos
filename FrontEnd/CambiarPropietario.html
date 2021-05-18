@@ -39,20 +39,22 @@
 </header>
 <div class="b-example-divider" id="espacio"></div>
 <form class="row g-3" action="/CambiarPropietario/" method="POST">{% csrf_token %}
+  <div style="margin: 20px">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Nombre del archivo</label>
     <input type="text" class="form-control" name="namaewa3" id="inputEmail4">
   </div>
+    <br>
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Nombre del nuevo propietario</label>
     <input type="text" class="form-control" name="ichigo2" id="inputEmail5">
   </div>
-
-
-
+    <br>
 <button type="submit" class="btn btn-primary">
   Cambiar propietario
 </button>
+
+  </div>
     </form>
 
 {{salida}}

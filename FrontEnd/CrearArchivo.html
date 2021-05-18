@@ -39,17 +39,19 @@
 </header>
 <div class="b-example-divider" id="espacio"></div>
 <form action="/CrearArchivo/" method="GET">
-  <div class="form-row">
+
+  <div class="form-row" style="margin:30px" >
     <div class="form-group col-auto">
-    <label for="exampleInputEmail1">Nombre</label>
-    <input type="text" class="form-control" name="aname" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
+    <label for="exampleInputEmail1">Nombre del Archivo</label>
+    <input type="text" name="aname" id="exampleInputEmail1" aria-describedby="emailHelp" required
+       minlength="1" maxlength="64" size="64">
+      <button type="submit" class="btn btn-primary" >
+    Crear Archivo
+      </button>
 
   </div>
 
-<button type="submit" class="btn btn-primary">
-  Crear Archivo
-</button>
+  </div>
 
 </form>
 {{salida}}

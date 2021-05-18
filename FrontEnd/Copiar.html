@@ -37,16 +37,19 @@
 </header>
 <div class="b-example-divider" id="espacio"></div>
 <form class="row g-3" action="/Copiar/" method="POST">{% csrf_token %}
+  <div style="margin: 20px">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Nombre del archivo</label>
     <input type="text" class="form-control" name="nameaa" id="inputEmail6">
   </div>
+    <br>
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Destino</label>
     <input type="text" class="form-control" name="destino" id="inputEmail4">
   </div>
+    <br>
   <button type="submit" class="btn btn-primary">Copiar y pegar</button>
-
+</div>
 </form>
 {{salida}}
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

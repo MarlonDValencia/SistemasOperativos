@@ -39,13 +39,15 @@
 </header>
 <div class="b-example-divider" id="espacio"></div>
 <form action="/VerPermisos/" method="GET">
-  <div class="form-row">
+
+  <div class="form-row" style="margin:30px">
     <div class="form-group col-auto">
     <label for="exampleInputEmail1">Nombre</label>
-    <input type="text" class="form-control" name="namaewa" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" name="namaewa" id="exampleInputEmail1" aria-describedby="emailHelp" required
+       minlength="1" maxlength="64" size="64">
+      <button type="submit" class="btn btn-primary">Consultar</button>
   </div>
-  <button type="submit" class="btn btn-primary">Consultar</button>
-  </div>
+</div>
 </form>
 
 

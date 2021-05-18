@@ -39,19 +39,23 @@
 </header>
 <div class="b-example-divider" id="espacio"></div>
 <form class="row g-3" action="/CambiarNombre/" method="POST">{% csrf_token %}
+  <div style="margin: 20px">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Nombre actual</label>
     <input type="text" class="form-control" name="nombrev" id="inputEmail4">
   </div>
+  <br>
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Nuevo nombre</label>
     <input type="text" class="form-control" name="nombren" id="inputEmail5">
   </div>
+<br>
+  <button type="submit" class="btn btn-primary">
+    Actualizar
+  </button>
 
 
-<button type="submit" class="btn btn-primary">
-  Cambiar Nombre
-</button>
+    </div>
 
 </form>
 {{salida}}

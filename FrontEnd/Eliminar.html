@@ -39,13 +39,16 @@
 </header>
 <div class="b-example-divider" id="espacio"></div>
 <form class="row g-3" action="/Eliminar/" method="GET">
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Nombre del archivo</label>
-    <input type="text" class="form-control" name="dname" id="inputEmail4">
+
+    <div class="form-row" style="margin:30px" >
+    <div class="form-group col-auto">
+    <label for="inputEmail4">Nombre del archivo</label>
+    <input type="text" name="dname" id="inputEmail4" aria-describedby="emailHelp" required
+       minlength="1" maxlength="64" size="64">
+    <button type="submit" class="btn btn-primary">Eliminar</button>
   </div>
-  <button type="submit" class="btn btn-primary">
-  Eliminar
-</button>
+      </div>
+
 
 </form>
 {{salida}}
