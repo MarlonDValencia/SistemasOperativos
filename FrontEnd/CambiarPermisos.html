@@ -37,7 +37,7 @@
   </div>
 </header>
 <div class="b-example-divider" id="espacio"></div>
-<form class="row g-3" action="/CambiarPermisos/" method="POST">{% csrf_token %}
+<form action="/CambiarPermisos/" method="POST">{% csrf_token %}
     <div style="margin: 30px">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Nombre del archivo</label>
@@ -52,11 +52,14 @@
         <br>
     <button type="submit" class="btn btn-primary">Cambiar permisos</button>
   </div>
-  <div style="margin: 30px">
+  <div style="margin: 30px; color: #464646 ; border:1px solid #37bac0">
+      <br>
     <h1>Informacion de permisos:</h1>
-    <p>Los permisos se deben ingresar de acuerdo a la siguiente conviccion:</p>
-    <li>Debe ser un numero de 3 digitos, siendo (usuario)(grupo)(otros)</li>
-    <li>cada digito debe ser entre 0 y 7, siendo estos:
+    <p>Los permisos se deben ingresar de acuerdo a la siguiente conviccion:
+        <br>
+    Debe ser un numero de 3 digitos, siendo (usuario)(grupo)(otros)
+        <br>
+    Cada digito debe ser entre 0 y 7, siendo estos:</p>
             <ul>
                 <li>7 = Todos los permisos (lectura, escritura y ejecucion)</li>
                 <li>6 = Permiso de lectura y escritura</li>
@@ -67,8 +70,8 @@
                 <li>1 = Solo permiso de ejecucion</li>
                 <li>0 = No se tiene permiso</li>
             </ul>
-        </li>
-        <p>Un ejemplo es el 711, donde el propietario tiene permisos de lectura, escritura y ejecucion, el grupo y otros solo ejecucion.</p>
+
+        <p>Un ejemplo es el 750, donde el propietario tiene todos los permisos, el grupo solo tiene permisos de lectura y ejecución y "otros" no tiene ningún permiso.</p>
   </div>
 
 

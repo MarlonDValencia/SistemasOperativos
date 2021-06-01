@@ -38,8 +38,8 @@
   </div>
 </header>
 <div class="b-example-divider" id="espacio"></div>
-<form class="row g-3" action="/CambiarNombre/" method="POST">{% csrf_token %}
-  <div style="margin: 20px">
+<form action="/CambiarNombre/" method="POST">{% csrf_token %}
+  <div style="margin: 30px">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Nombre actual</label>
     <input type="text" class="form-control" name="nombrev" id="inputEmail4">
@@ -56,6 +56,20 @@
 
 
     </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p align="center", style="color: #464646 ; margin:30px; border:1px solid #37bac0   " > Se busca cambiar el nombre de algun archivo o carpeta.
+    <br>
+    Se debe especificar el nombre actual del archivo y el nuevo nombre que queremos que tenga, se debe tener en
+    <br>
+    cuenta que el nuevo nombre debe ser distinto a los nombres de las carpetas o archivos ya existentes.
+
+
+  </p>
 
 </form>
 {{salida}}

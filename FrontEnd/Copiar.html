@@ -36,8 +36,8 @@
   </div>
 </header>
 <div class="b-example-divider" id="espacio"></div>
-<form class="row g-3" action="/Copiar/" method="POST">{% csrf_token %}
-  <div style="margin: 20px">
+<form action="/Copiar/" method="POST">{% csrf_token %}
+  <div style="margin: 30px">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Nombre del archivo</label>
     <input type="text" class="form-control" name="nameaa" id="inputEmail6">
@@ -50,6 +50,21 @@
     <br>
   <button type="submit" class="btn btn-primary">Copiar y pegar</button>
 </div>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p align="center", style="color: #464646 ; margin:30px; border:1px solid #37bac0   " >Se copia un archivo o carpeta desde la carpeta principal a otra de las carpetas que existan en ese momento.
+    <br>
+    se debe especificar un archivo y una carpeta de destino EXISTENTE, si no el método no hará nada.
+
+
+  </p>
+
 </form>
 {{salida}}
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
