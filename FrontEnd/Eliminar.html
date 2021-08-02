@@ -20,63 +20,52 @@
       </a>
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" id="sisa">
-        <img src="../assets/imgs/folder.svg" id="Iconito" alt="https://www.facebook.com/pagina">
-        <li><a href="#" class="nav-link px-2 text-secondary">Ruta</a></li>
+        <a href="/"><img src="../assets/imgs/folder.svg" id="Iconito"></a>
         <li><a href="/CrearArchivo" class="nav-link px-2 text-white">Crear Archivos</a></li>
         <li><a href="/CrearCarpeta" class="nav-link px-2 text-white">Crear Carpeta</a></li>
         <li><a href="/CambiarNombre" class="nav-link px-2 text-white">Cambiar Nombre</a></li>
         <li><a href="/Eliminar" class="nav-link px-2 text-white">Eliminar</a></li>
-        <li><a href="/Copiar" class="nav-link px-2 text-white">Copiar</a></li>
-        <li><a href="/Mover" class="nav-link px-2 text-white">Mover</a></li>
+        <li><a href="/Copiar" class="nav-link px-2 text-white">Copiar Elemento</a></li>
+        <li><a href="/Mover" class="nav-link px-2 text-white">Mover Elemento</a></li>
         <li><a href="/VerPermisos" class="nav-link px-2 text-white">Ver Permisos</a></li>
         <li><a href="/CambiarPermisos" class="nav-link px-2 text-white">Cambiar Permisos</a></li>
         <li><a href="/CambiarPropietario" class="nav-link px-2 text-white">Cambiar Propietario</a></li>
-        <li><a href="/CambiarRuta" class="nav-link px-2 text-white">Cambiar ruta</a></li>
+        <li><a href="/Buscar" class="nav-link px-2 text-white">Buscar</a></li>
       </ul>
 
-      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-        <input type="search" class="form-control form-control-dark" placeholder="Buscar...">
-      </form>
 
-      <div class="text-end">
-        <button type="button" class="btn btn-outline-light me-2">Buscar Carpeta</button>
-        <button type="button" class="btn btn-warning">Buscar Archivo</button>
-      </div>
     </div>
   </div>
 </header>
 <div class="b-example-divider" id="espacio"></div>
-<form class="row g-3">
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Nombre del archivo</label>
-    <input type="text" class="form-control" id="inputEmail4">
-  </div>
+<form action="/Eliminar/" method="GET">
 
-  <div class="col-12">
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Eliminar
-</button>
+    <div class="form-row" style="margin:30px" >
+    <div class="form-group col-auto">
+    <label for="inputEmail4">Nombre del archivo</label>
+    <input type="text" name="dname" id="inputEmail4" aria-describedby="emailHelp" required
+       minlength="1" maxlength="64" size="64">
+    <button type="submit" class="btn btn-primary">Eliminar</button>
+  </div>
+      </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p align="center", style="color: #464646 ; margin:30px; border:1px solid #37bac0   " >En este apartado lo que se busca es eliminar algún archivo o carpeta,
+    si la carpeta tiene archivos dentro, estos también se eliminan
+    <br>
+    se especifica el nombre del archivo o carpeta a eliminar, si dado el caso se pone un nombre que no corresponde a nada no se elimina nada y
+    no cambia el estado de nuestra carpeta base, sin embargo saldrá el mensaje de "eliminado con éxito"
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Archivo eliminado</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        El archivo ha sido eliminado exitosamente
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>
-      </div>
-    </div>
-  </div>
-</div>
-  </div>
+
+  </p>
+
+
 </form>
+{{salida}}
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

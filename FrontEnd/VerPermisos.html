@@ -20,63 +20,69 @@
       </a>
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" id="sisa">
-        <img src="../assets/imgs/folder.svg" id="Iconito" alt="https://www.facebook.com/pagina">
-        <li><a href="#" class="nav-link px-2 text-secondary">Ruta</a></li>
+        <a href="/"><img src="../assets/imgs/folder.svg" id="Iconito"></a>
         <li><a href="/CrearArchivo" class="nav-link px-2 text-white">Crear Archivos</a></li>
         <li><a href="/CrearCarpeta" class="nav-link px-2 text-white">Crear Carpeta</a></li>
         <li><a href="/CambiarNombre" class="nav-link px-2 text-white">Cambiar Nombre</a></li>
         <li><a href="/Eliminar" class="nav-link px-2 text-white">Eliminar</a></li>
-        <li><a href="/Copiar" class="nav-link px-2 text-white">Copiar</a></li>
-        <li><a href="/Mover" class="nav-link px-2 text-white">Mover</a></li>
+        <li><a href="/Copiar" class="nav-link px-2 text-white">Copiar Elemento</a></li>
+        <li><a href="/Mover" class="nav-link px-2 text-white">Mover Elemento</a></li>
         <li><a href="/VerPermisos" class="nav-link px-2 text-white">Ver Permisos</a></li>
         <li><a href="/CambiarPermisos" class="nav-link px-2 text-white">Cambiar Permisos</a></li>
         <li><a href="/CambiarPropietario" class="nav-link px-2 text-white">Cambiar Propietario</a></li>
-        <li><a href="/CambiarRuta" class="nav-link px-2 text-white">Cambiar ruta</a></li>
+        <li><a href="/Buscar" class="nav-link px-2 text-white">Buscar</a></li>
       </ul>
 
-      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-        <input type="search" class="form-control form-control-dark" placeholder="Buscar...">
-      </form>
 
-      <div class="text-end">
-        <button type="button" class="btn btn-outline-light me-2">Buscar Carpeta</button>
-        <button type="button" class="btn btn-warning">Buscar Archivo</button>
-      </div>
     </div>
   </div>
 </header>
 <div class="b-example-divider" id="espacio"></div>
-<form class="row g-3">
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Nombre del archivo</label>
-    <input type="text" class="form-control" id="inputEmail4">
-  </div>
+<form action="/VerPermisos/" method="GET">
 
-  <div class="col-12">
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Consultar
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Permisos del archivo</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Los permisos del archivo son: 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>
-      </div>
-    </div>
+  <div class="form-row" style="margin:30px">
+    <div class="form-group col-auto">
+    <label for="exampleInputEmail1">Nombre</label>
+    <input type="text" name="namaewa" id="exampleInputEmail1" aria-describedby="emailHelp" required
+       minlength="1" maxlength="64" size="64">
+      <button type="submit" class="btn btn-primary">Consultar</button>
   </div>
 </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p align="center", style="color: #464646 ; margin:30px; border:1px solid #37bac0   " >Se pone el nombre del archivo o carpeta en el espacio, la forma de leer lo que devuelve esta función es la siguiente.
+    <br>
+    -rw-rw-r-- 1 juan juan 0 jun 1 17:02 hola
+    <br>
+    En este caso el orden es: permisos de propietario, permisos de grupo de usuarios, permisos de "otros" (la nomenclatura de los permisos está explicada en la tabla).
+    <br>
+    Seguido de los permisos tenemos un número el cual indica la cantidad de enlaces que tiene el archivo en cuestión, en este caso el archivo tiene solo un enlace.
+    <br>
+    Seguido tenemos el propietario del archivo.
+    <br>
+    Seguido tenemos al grupo.
+    <br>
+    Seguido tenemos el tamaño del archivo en bytes, la fecha y la hora y para finalizar el nombre del archivo.
+
+
+
+  </p>
+  <div align="center" >
+  <img src="../assets/imgs/1.webp" >
   </div>
 </form>
+
+
+
+<br>
+<h1>{{ salida }}</h1>
+<h1>{{ out }}</h1>
+
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

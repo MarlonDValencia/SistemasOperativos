@@ -19,179 +19,27 @@
       <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
       </a>
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" id="sisa">
-        <img src="../assets/imgs/folder.svg" id="Iconito" alt="https://www.facebook.com/pagina">
-        <li><a href="#" class="nav-link px-2 text-secondary">Ruta</a></li>
+        <a href="/"><img src="../assets/imgs/folder.svg" id="Iconito"></a>
         <li><a href="/CrearArchivo" class="nav-link px-2 text-white">Crear Archivos</a></li>
         <li><a href="/CrearCarpeta" class="nav-link px-2 text-white">Crear Carpeta</a></li>
         <li><a href="/CambiarNombre" class="nav-link px-2 text-white">Cambiar Nombre</a></li>
         <li><a href="/Eliminar" class="nav-link px-2 text-white">Eliminar</a></li>
-        <li><a href="/Copiar" class="nav-link px-2 text-white">Copiar</a></li>
-        <li><a href="/Mover" class="nav-link px-2 text-white">Mover</a></li>
+        <li><a href="/Copiar" class="nav-link px-2 text-white">Copiar Elemento</a></li>
+        <li><a href="/Mover" class="nav-link px-2 text-white">Mover Elemento</a></li>
         <li><a href="/VerPermisos" class="nav-link px-2 text-white">Ver Permisos</a></li>
         <li><a href="/CambiarPermisos" class="nav-link px-2 text-white">Cambiar Permisos</a></li>
         <li><a href="/CambiarPropietario" class="nav-link px-2 text-white">Cambiar Propietario</a></li>
-        <li><a href="/CambiarRuta" class="nav-link px-2 text-white">Cambiar ruta</a></li>
-      </ul>
-      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-        <input type="search" class="form-control form-control-dark" placeholder="Buscar...">
-      </form>
+        <li><a href="/Buscar" class="nav-link px-2 text-white">Buscar</a></li>
 
-      <div class="text-end">
-        <button type="button" class="btn btn-outline-light me-2">Buscar Carpeta</button>
-        <button type="button" class="btn btn-warning">Buscar Archivo</button>
-      </div>
+      </ul>
+
     </div>
   </div>
 </header>
 <div class="b-example-divider" id="espacio"></div>
 
-<div class="album py-5 bg-light">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col" id="col">
-          <div class="card shadow-sm" id="Thumbnail">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Archivo</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+  {{ubicación}}
 
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Abrir</button>
-                </div>
-                <small class="text-muted">Nombre Archivo</small>
-              </div>
-            </div>
-          </div>
-        </div>
-    <div class="col" id="col">
-          <div class="card shadow-sm" id="Thumbnail">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Archivo</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Abrir</button>
-                </div>
-                <small class="text-muted">Nombre Archivo</small>
-              </div>
-            </div>
-          </div>
-        </div>
-            <div class="col" id="col">
-          <div class="card shadow-sm" id="Thumbnail">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Archivo</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Abrir</button>
-                </div>
-                <small class="text-muted">Nombre Archivo</small>
-              </div>
-            </div>
-          </div>
-        </div>
-                <div class="col" id="col">
-          <div class="card shadow-sm" id="Thumbnail">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Archivo</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Abrir</button>
-                </div>
-                <small class="text-muted">Nombre Archivo</small>
-              </div>
-            </div>
-          </div>
-        </div>
-                <div class="col" id="col">
-          <div class="card shadow-sm" id="Thumbnail">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Archivo</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Abrir</button>
-                </div>
-                <small class="text-muted">Nombre Archivo</small>
-              </div>
-            </div>
-          </div>
-        </div>
-                <div class="col" id="col">
-          <div class="card shadow-sm" id="Thumbnail">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Archivo</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Abrir</button>
-                </div>
-                <small class="text-muted">Nombre Archivo</small>
-              </div>
-            </div>
-          </div>
-        </div>
-                <div class="col" id="col">
-          <div class="card shadow-sm" id="Thumbnail">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Archivo</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Abrir</button>
-                </div>
-                <small class="text-muted">Nombre Archivo</small>
-              </div>
-            </div>
-          </div>
-        </div>
-                <div class="col" id="col">
-          <div class="card shadow-sm" id="Thumbnail">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Archivo</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Abrir</button>
-                </div>
-                <small class="text-muted">Nombre Archivo</small>
-              </div>
-            </div>
-          </div>
-        </div>
-                <div class="col" id="col">
-          <div class="card shadow-sm" id="Thumbnail">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Archivo</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Abrir</button>
-                </div>
-                <small class="text-muted">Nombre Archivo</small>
-              </div>
-            </div>
-          </div>
-        </div>
-                <div class="col" id="col">
-          <div class="card shadow-sm" id="Thumbnail">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Archivo</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Abrir</button>
-                </div>
-                <small class="text-muted">Nombre Archivo</small>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-
-  </div>
-</div>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

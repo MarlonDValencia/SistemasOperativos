@@ -38,33 +38,45 @@
   </div>
 </header>
 <div class="b-example-divider" id="espacio"></div>
-<form action="/CrearCarpeta/" method="GET">
+
+<form action="/Buscar/" method="GET">
   <div class="form-row" style="margin:30px">
     <div class="form-group col-auto">
-    <label for="exampleInputEmail1">Nombre de la Carpeta</label>
-    <input type="text" name="cname" id="exampleInputEmail1" aria-describedby="emailHelp" required
+    <label for="exampleInputEmail1">Nombre del Archivo/Carpeta</label>
+    <input type="text" name="bbus" id="exampleInputEmail1" aria-describedby="emailHelp" required
        minlength="1" maxlength="64" size="64">
-      <button type="submit" class="btn btn-primary" >
-    Crear Carpeta
-  </button>
+      <button type="submit" class="btn btn-primary">Buscar </button>
   </div>
 
   </div>
+
+<br>
   <br>
   <br>
   <br>
   <br>
   <br>
-  <br>
-  <p align="center", style="color: #464646 ; margin:30px; border:1px solid #37bac0   " >Con esta función se pretende crear una nueva carpeta dentro de la cual podremos crear o
-    mover archivos posteriormente.
+  <p align="center", style="color: #464646 ; margin:30px; border:1px solid #37bac0   " >
+    Como se indica lo único que se debe especificar es el nombre del archivo o carpeta que se quiera buscar, esta operación hace una búsqueda axhaustiva,
+
     <br>
-    Lo único que se debe especificar es el nombre de la carpeta a crear, el cual no puede ser igual a ningún otro archivo o carpeta ya existente, pues esto no lo permite el sistema operativo utilizado.
+    por lo que puede buscar cosas que estén dentro de otras carpetas, no solo se limita a la carpeta raiz.
 
 
   </p>
+
 </form>
-{{salida}}
+{{tx2}}
+<br>
+{{out1}}
+<br>
+{{tx1}}
+<br>
+{{out2}}
+
+
+
+
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
