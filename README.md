@@ -1,2 +1,2 @@
 # SistemasOperativos
-Repositorio pa hacer la vuelta de SO
+Repositorio pa hacer la vuelta de SO.
